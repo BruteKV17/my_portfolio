@@ -154,7 +154,19 @@ export default function ProjectRow({ project }: ProjectRowProps) {
             variants={borderVariants}
             className="w-full aspect-[4/3] rounded-lg border flex items-center justify-center overflow-hidden bg-[#110b24]/40 group-hover:bg-[#070210]/60 transition-all duration-300 relative"
           >
-            {project.id === "noteit-ai" ? (
+            {project.image ? (
+              /* High-fidelity screenshot frame matching the cosmic aesthetic */
+              <div className="w-[92%] h-[88%] rounded-lg border border-purple-500/10 group-hover:border-white/15 bg-[#070210] overflow-hidden shadow-2xl relative select-none group/img transition-all duration-500">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/img:scale-[1.03]"
+                />
+                {/* Modern subtle cosmic gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#070210]/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 border border-white/5 rounded-lg pointer-events-none" />
+              </div>
+            ) : project.id === "noteit-ai" ? (
               /* Custom layout recreation from NoteIT AI dashboard screenshot */
               <div className="w-[90%] h-[85%] rounded-lg border border-purple-500/10 group-hover:border-white/10 bg-[#070210] p-4 flex flex-col justify-between shadow-2xl relative select-none">
                 

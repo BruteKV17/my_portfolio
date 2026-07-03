@@ -7,6 +7,7 @@ export interface Project {
   description: string;
   tags: string[];
   link?: string;
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -38,6 +39,7 @@ export const projects: Project[] = [
     role: "AI Developer & UI Designer",
     description: "An AI-powered health and agriculture assistant achieving high accuracy using real-time image-based analysis. Utilized machine learning and data-driven insights to detect human and plant diseases, providing precise diagnosis and actionable recommendations.",
     tags: ["Next.js", "CNN", "RNN", "Kaggle", "Kubernetes"],
-    link: "#"
+    link: "https://curegenie.in",
+    image: "/curegenie.png"
   }
 ];
