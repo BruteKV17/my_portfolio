@@ -29,7 +29,8 @@ export const projects: Project[] = [
     role: "Fullstack & NLP Developer",
     description: "An AI-driven language translation system focused on Sinhala and Nepali languages for improved cross-lingual communication. Utilized natural language processing and machine learning techniques to deliver accurate, context-aware translations.",
     tags: ["Next.js", "React.js", "Firebase", "TypeScript", "TSX", "NLP"],
-    link: "#"
+    link: "#",
+    image: "/bhashabridge.jpg"
   },
   {
     id: "cure-genie",
