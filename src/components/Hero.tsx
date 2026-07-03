@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import InteractiveProfile from "./InteractiveProfile";
 
 export default function Hero() {
   const containerVariants = {
@@ -59,25 +60,33 @@ export default function Hero() {
         <div className="border-none" />
       </div>
 
-      {/* Main typographic header */}
-      <div className="flex-grow flex flex-col justify-center max-w-[1400px] mx-auto w-full z-10">
-        <motion.h1
-          variants={containerVariants}
-          initial="initial"
-          animate="animate"
-          className="font-display font-bold tracking-tighter text-primary-text lowercase text-[12.5vw] md:text-[8vw] lg:text-[7.5vw] leading-[0.88] select-none text-left"
-        >
-          {lines.map((line, idx) => (
-            <div key={idx} className="overflow-hidden text-reveal-mask block">
-              <motion.span
-                variants={lineVariants}
-                className="inline-block origin-bottom transform-gpu"
-              >
-                {line}
-              </motion.span>
-            </div>
-          ))}
-        </motion.h1>
+      {/* Main typographic header & Interactive Profile */}
+      <div className="flex-grow flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 max-w-[1400px] mx-auto w-full z-10 py-8 lg:py-0">
+        {/* Left column: Headline */}
+        <div className="w-full lg:w-[58%] flex flex-col justify-center">
+          <motion.h1
+            variants={containerVariants}
+            initial="initial"
+            animate="animate"
+            className="font-display font-bold tracking-tighter text-primary-text lowercase text-[12.5vw] md:text-[8vw] lg:text-[5.8vw] xl:text-[5.4vw] leading-[0.88] select-none text-left"
+          >
+            {lines.map((line, idx) => (
+              <div key={idx} className="overflow-hidden text-reveal-mask block">
+                <motion.span
+                  variants={lineVariants}
+                  className="inline-block origin-bottom transform-gpu"
+                >
+                  {line}
+                </motion.span>
+              </div>
+            ))}
+          </motion.h1>
+        </div>
+
+        {/* Right column: Interactive motion graphics profile */}
+        <div className="w-full lg:w-[42%] flex justify-center items-center">
+          <InteractiveProfile />
+        </div>
       </div>
 
       {/* Hero Metadata & Scroll Indicator */}
