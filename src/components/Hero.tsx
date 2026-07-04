@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import InteractiveProfile from "./InteractiveProfile";
 
 export default function Hero() {
   const containerVariants = {
@@ -60,10 +59,10 @@ export default function Hero() {
         <div className="border-none" />
       </div>
 
-      {/* Main typographic header & Interactive Profile */}
-      <div className="flex-grow flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 max-w-[1400px] mx-auto w-full z-10 py-8 lg:py-0">
+      {/* Main typographic header */}
+      <div className="flex-grow flex flex-col justify-center max-w-[1400px] mx-auto w-full z-10 py-8 lg:py-0">
         {/* Left column: Headline */}
-        <div className="w-full lg:w-[58%] flex flex-col justify-center">
+        <div className="w-full max-w-[1000px] flex flex-col justify-center">
           <motion.h1
             variants={containerVariants}
             initial="initial"
@@ -81,11 +80,6 @@ export default function Hero() {
               </div>
             ))}
           </motion.h1>
-        </div>
-
-        {/* Right column: Interactive motion graphics profile */}
-        <div className="w-full lg:w-[42%] flex justify-center items-center">
-          <InteractiveProfile />
         </div>
       </div>
 
